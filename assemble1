@@ -1,0 +1,24 @@
+ORG	 0
+	JMP	 INICIO
+	ORG	 10
+	DB	 "Vitor Pereira da Costa"
+	ORG	 40
+inicio:	CLO	
+	MOV	 CL,C0
+	MOV	 BL,8
+	MOV	 DL,10
+
+prox:	MOV	 AL,[DL]
+	MOV	 [CL],AL
+	INC	 CL
+	inc	 DL
+	inc	 BL
+	JNZ	 PROX
+	
+	MOV	 CL,C0
+	MOV	 BL,8
+	MOV	 DL,4D
+
+
+END
+
